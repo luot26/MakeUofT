@@ -1,25 +1,21 @@
-class Coop{
-    private:
-    int pin_number;
-    int score;
+#include "Coop.h"
 
-    public:
-
-    Coop(int number)
+Coop::Coop(int number)
     {
         pin_number=number;
         score=0;
     };
 
-    void Decision(){
+void Coop::decision(){
         //be nice
-    }
-    void increment_score(int val)
+}
+
+void Coop::increment_score(int val)
     {
         score+=val;
     }
-    int get_score()
+
+int Coop::get_score()
     {
         return score;
     }
-};

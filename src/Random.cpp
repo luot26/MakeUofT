@@ -1,27 +1,19 @@
-class Random{
-    private:
+#include "Random.h"
 
-    int evenodd;
-    int pin_number;
-    int score;
-
-    public:
-
-    Random(int number)
+    Random::Random(int number)
     {
         pin_number=number;
         score=0;
     };
 
-    void Decision(){
+    void Random::decision(){
         
     }
-    void increment_score(int val)
+    void Random::increment_score(int val)
     {
         score+=val;
     }
-    int get_score()
+    int Random::get_score()
     {
         return score;
     }
-};
