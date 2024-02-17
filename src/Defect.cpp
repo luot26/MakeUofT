@@ -1,26 +1,19 @@
-class Defect{
-    private:
-
-    int pin_number;
-    int score;
-
-    public:
-
-    Defect(int number)
+#include "Defect.h"
+Defect::Defect(int number)
     {
         pin_number=number;
         score=0;
     };
 
-    void Decision(){
+void Defect::Decision()
+    {
         //fuck em over
     }
-    void increment_score(int val)
-    {
-        score+=val;
-    }
-    int get_score()
+void Defect::increment_score(int val)
+{
+    score+=val;  
+}
+int Defect::get_score()
     {
         return score;
     }
-};
