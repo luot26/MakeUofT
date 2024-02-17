@@ -1,13 +1,12 @@
-class Coop
+#ifndef COOP_H
+#define COOP_H
+#include "Player.h"
+
+class Coop : public Player
 {
-    private:
-        int score;
-    int pin_number;
-
     public:
-
     Coop(int number);
-    void decision();
-    void increment_score(int val);
-    int get_score();
+    void decision() override;
 };
+
+#endif

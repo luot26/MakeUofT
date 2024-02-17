@@ -1,14 +1,12 @@
-class Defect
+#ifndef DEFECT_H
+#define DEFECT_H
+#include "Player.h"
+
+class Defect : public Player
 {
-    private:
-
-    int pin_number;
-    int score;
-
     public:
-
     Defect(int number);
-    void Decision();
-    void increment_score(int val);
-    int get_score();
+    void decision() override;
 };
+
+#endif

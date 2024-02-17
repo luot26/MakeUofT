@@ -1,10 +1,8 @@
 #include "TitForTat.h"
 
-TitForTat::TitForTat(int number)    
+TitForTat::TitForTat(int number) : Player(number)
 {
     mad=false;
-    pin_number=number;
-    score=0;
 }
 void TitForTat::decision()
 {
@@ -17,13 +15,4 @@ void TitForTat::decision()
         // retaliate
         // set mad= to false
     }
-}
-void TitForTat::increment_score(int val)
-{
-    score+=val;    
-}
-
-int TitForTat::get_score()
-{
-    return score;
 }

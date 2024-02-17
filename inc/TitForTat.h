@@ -1,15 +1,15 @@
-class TitForTat
+#ifndef TITFORTAT_H
+#define TITFORTAT_H
+#include "Player.h"
+
+class TitForTat : public Player
 {
-
     private:
+    bool mad; 
 
-    bool mad;
-    int pin_number;
-    int score;
     public:
-    
-     TitForTat(int number);
-     void decision();
-     void increment_score(int val);
-     int get_score();
+    TitForTat(int number);
+    void decision() override; 
 };
+
+#endif

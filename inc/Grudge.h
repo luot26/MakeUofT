@@ -1,15 +1,16 @@
-class Grudge
+#ifndef GRUDGE_H
+#define GRUDGE_H
+#include "Player.h"
+
+class Grudge : public Player
 {
     private:
-    
     bool holding_grudge;
-    int score;
-    int pin_number;
 
     public:
-
     Grudge(int number);
-    void decision();
-    void increment_score(int val);
-    int get_score();
+    void decision() override;
+    
 };
+
+#endif

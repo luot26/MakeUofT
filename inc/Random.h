@@ -1,14 +1,12 @@
-class Random
+#ifndef RANDOM_H
+#define RANDOM_H
+#include "Player.h"
+
+class Random : public Player
 {
-    private:
-    
-    int score;
-    int pin_number;
-
     public:
-
     Random(int number);
-    void decision();
-    void increment_score(int val);
-    int get_score();
+    void decision() override;
 };
+
+#endif
