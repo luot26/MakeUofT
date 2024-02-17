@@ -1,2 +1,5 @@
 #include "Grudge.h"
 #include "TitForTat.h"
+#include "Random.h"
+#include "Coop.h"
+#include "Defect.h"
