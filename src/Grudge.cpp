@@ -5,20 +5,25 @@ Grudge::Grudge(int number) : Player(number)
     holding_grudge= false;
 }
 
-void Grudge::decision()
+bool Grudge::decision()
 {
     if( !holding_grudge)
     {
-        //be nice
+    return true;
     }
     else
     {
+      return false;
         //retalliate
     }
 }
 
 void Grudge::print_info()
 {
-    std::cout << "GRUDGE" << std::endl <<"Holding Grudge = " << holding_grudge
-    << ", Score is " << score << std::endl;
+  Serial.print("GRUDGE\nScore is ");
+  Serial.print(score);
+  Serial.print('\n');
+  Serial.print("Holding Grudge: ");
+  Serial.print(holding_grudge);
+  Serial.print('\n');
 }

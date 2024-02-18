@@ -2,12 +2,16 @@
 
 Defect::Defect(int number) : Player(number){ }
 
-void Defect::decision()
+bool Defect::decision()
 {
-        //fuck em over
+  return false;
+  
 }
 
 void Defect::print_info()
 {
-    std::cout << "DEFECT" << std::endl << "Score is " << score << std::endl;
+  Serial.print("DEFECT\nScore is ");
+  Serial.print(score);
+  Serial.print('\n');
+    
 }

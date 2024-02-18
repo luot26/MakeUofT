@@ -1,13 +1,16 @@
-#include "Coop.h"
+ #include "Coop.h"
 
 Coop::Coop(int number) : Player(number){ }
 
-void Coop::decision(){
-        //be nice
+bool Coop::decision()
+{
+  return true;
+        //be nice, cooperate
 }
 
 void Coop::print_info()
 {
-        std::cout << "COOPERATIVE" << std::endl << "Score is " << score << std::endl;
+  Serial.print("COOPERATIVE\nScore is ");
+  Serial.print(score);
+  Serial.print('\n');
 }
-

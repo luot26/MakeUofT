@@ -2,33 +2,23 @@
 
 Random::Random(int number) : Player(number){ }
 
-void Random::decision()
+bool Random::decision()
 {
-    //gen random num
-    int num = random_num(20);
-    //if even, defect
-    if (num % 2 == 0)
+    //want 10% chance of cooperating
+    int val= random(1,10);
+    if (val==5)
     {
-        //be a dick
+     return true;
     }
-    //if odd, cooperate
     else
     {
-        //be nice
+      return false;
     }
-
 }
-
-int Random::random_num(int range)
-    {  
-    srand(time(NULL));
-    int random= rand() %(range-2) +1;  //if input is 20, will range from 1-18
-    //if input is 10, will range from 1 to 8
-    return random;
-} 
 
 void Random::print_info()
 {
-    std::cout << "RANDOM" << std::endl << "Score is " << score << std::endl;
+    Serial.print("RANDOM\nScore is ");
+    Serial.print(score);
+    Serial.print('\n');
 }
-

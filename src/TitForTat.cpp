@@ -4,16 +4,16 @@ TitForTat::TitForTat(int number) : Player(number)
 {
     mad=false;
 }
-void TitForTat::decision()
+bool TitForTat::decision()
 {
     if(!mad) //if not mad
     {
-        // trust otherperson
+        return true;
     }
-    else //mad
+    else
     {
-        // retaliate
-        // set mad= to false
+        return false;
+        mad=false;
     }
 }
 
@@ -28,6 +28,10 @@ void TitForTat::increment_score(int & val)
 
 void TitForTat::print_info()
 {
-     std::cout << "TIT FOR TAT" << std::endl <<"Mad = " << mad
-    << ", Score is " << score << std::endl;
+  Serial.print("TIT FOR TAT\nScore is ");
+  Serial.print(score);
+  Serial.print('\n');
+  Serial.print("Mad = ");
+  Serial.print(mad);
+  Serial.print('\n');
 }
