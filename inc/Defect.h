@@ -7,6 +7,8 @@ class Defect : public Player
     public:
     Defect(int number);
     void decision() override;
+    void print_info();
 };
+
 
 #endif

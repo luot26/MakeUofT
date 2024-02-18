@@ -7,6 +7,7 @@ class Coop : public Player
     public:
     Coop(int number);
     void decision() override;
+    void print_info();
 };
 
 #endif

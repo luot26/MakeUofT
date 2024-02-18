@@ -2,6 +2,7 @@
 #define GRUDGE_H
 #include "Player.h"
 
+
 class Grudge : public Player
 {
     private:
@@ -10,6 +11,7 @@ class Grudge : public Player
     public:
     Grudge(int number);
     void decision() override;
+    void print_info();
     
 };
 

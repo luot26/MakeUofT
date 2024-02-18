@@ -16,3 +16,9 @@ void Grudge::decision()
         //retalliate
     }
 }
+
+void Grudge::print_info()
+{
+    std::cout << "GRUDGE" << std::endl <<"Holding Grudge = " << holding_grudge
+    << ", Score is " << score << std::endl;
+}

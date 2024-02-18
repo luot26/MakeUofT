@@ -10,6 +10,9 @@ class TitForTat : public Player
     public:
     TitForTat(int number);
     void decision() override; 
+    void increment_score(int & val);
+
+    void print_info();
 };
 
 #endif

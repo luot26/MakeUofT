@@ -6,3 +6,8 @@ void Coop::decision(){
         //be nice
 }
 
+void Coop::print_info()
+{
+        std::cout << "COOPERATIVE" << std::endl << "Score is " << score << std::endl;
+}
+

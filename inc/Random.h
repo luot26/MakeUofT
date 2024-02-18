@@ -7,6 +7,7 @@ class Random : public Player
     public:
     Random(int number);
     void decision() override;
+    void print_info();
 };
 
 #endif
