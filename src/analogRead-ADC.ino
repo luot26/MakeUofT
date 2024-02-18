@@ -151,9 +151,11 @@ void loop()
           array_C[num_rounds] = 1;
           break; 
       }
-      Serial.print("Aldron Score: "); Serial.println(A_score); 
-      Serial.print("Clarence Score: "); Serial.println(C_score);
-      delay(100);
+      lcd.clear();
+      lcd.print("A Score: "); lcd.print(A_score); 
+      lcd.setCursor(0,2);
+      lcd.print("C Score: "); lcd.print(C_score);
+      delay(500);
       break;
     }
     delay(1000);
@@ -161,7 +163,8 @@ void loop()
   } 
  num_rounds++;
 
- if(num_rounds == 9){
+ if(num_rounds == 9)
+ {
      lcd.clear();
      Serial.print("Aldron's history: ");
      print_array(array_A, 8);
@@ -177,7 +180,8 @@ void loop()
       delay(1000);
       exit(1);
      }
-     else{
+     else
+     {
       lcd.print("It's a tie!");
       delay(1000);
       exit(1);
