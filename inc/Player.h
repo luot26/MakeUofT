@@ -1,6 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
 
 class Player {
 
